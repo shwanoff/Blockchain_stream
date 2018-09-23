@@ -17,8 +17,17 @@ namespace Blockchain.Tests
             var chain = new Chain();
             chain.Add("Code blog", "Admin");
 
-            Assert.AreEqual(2, chain.Blocks.Count);
             Assert.AreEqual("Code blog", chain.Last.Data);
+        }
+
+        [TestMethod()]
+        public void CheckTest()
+        {
+            var chain = new Chain();
+            chain.Add("hello, world", "Admin");
+            chain.Add("code blog", "shwan");
+
+            Assert.IsTrue(chain.Check());
         }
     }
 }

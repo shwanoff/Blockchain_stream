@@ -95,7 +95,6 @@ namespace Blockchain
         {
             string result = "";
 
-            result += Id.ToString();
             result += Data;
             result += Created.ToString("dd.MM.yyyy HH:mm:ss.fff");
             result += PreviousHash;

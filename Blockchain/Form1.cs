@@ -23,20 +23,14 @@ namespace Blockchain
         {
             listBox1.Items.Clear();
 
-            _chain.Add(textBox1.Text, "Admin");
+            _chain.Add(textBox1.Text, "User");
 
-            foreach (var block in _chain.Blocks)
-            {
-                listBox1.Items.Add(block);
-            }
+            listBox1.Items.AddRange(_chain.Blocks.ToArray());
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            foreach(var block in _chain.Blocks)
-            {
-                listBox1.Items.Add(block);
-            }
+            listBox1.Items.AddRange(_chain.Blocks.ToArray());
         }
     }
 }

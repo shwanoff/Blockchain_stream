@@ -5,7 +5,7 @@ using System.Linq;
 namespace Blockchain
 {
     /// <summary>
-    /// Цепочка блоковл
+    /// Цепочка блоков.
     /// </summary>
     public class Chain
     {
@@ -116,6 +116,11 @@ namespace Blockchain
             }
 
             return result;
+        }
+
+        private void Sync()
+        {
+
         }
     }
 }
